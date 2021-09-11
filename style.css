@@ -1,20 +1,22 @@
 
-@media only screen and (max-width: 375px) {
-    body{
+@media only screen and (max-width: 23.438rem) {
+    *{
         font-size: calc(60% + 0.8vmin);
-        min-height: 100%;
-        background-image: url(./order-summary-component-main/images/pattern-background-mobile.svg);
-        background-size:contain;
-        background-repeat: no-repeat;
-        background-position:top;
-        background-color: hsl(225, 100%, 94%);
+        padding: 0;
+        margin: 0;
     }
-    div.container{
-    
+    body{
+        background-image: url(./order-summary-component-main/images/pattern-background-mobile.svg);
+        background-size:auto;
+        background-repeat: no-repeat;
+        background-position:center top;
+        background-color: hsl(225, 100%, 94%);
+        background-attachment: fixed;
+        text-align: center;
+    }
+    .container{
+        width: 20.313rem;
        display: block;
-       justify-content: space-around;
-       width: 20.5rem;
-       max-width: 90rem;
        -webkit-box-shadow: 5px 5px 15px 5px hsl(245, 75%, 52%,25%); 
        box-shadow: 5px 5px 15px 5px hsl(245, 75%, 52%,25%);
        margin-top: 5rem;
@@ -23,12 +25,18 @@
        align-items: center;
        border-radius: 1rem;
        padding-bottom: 2rem;
+       border: 1px solid red;
     }
-    div.imgcontent{
-        width: 19rem;
-        max-width: 23.5rem;
+    .container>p{
+        font-size: 0.875rem;
     }
-    div.plan{
+    .container>h2{
+        font-size: 1.5rem;
+    }
+    .imgcontent>h4{
+        font-size: 0.875rem;
+    }
+    .plan{
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -37,20 +45,29 @@
         max-width: 23.5rem;
         margin-right: 4rem;
     }
-}
-    @media screen and (min-width : 23.5rem) {
-        html{
-            font-size: calc(60% + 0.8vmin);
-            min-height: 100%;
-            background-image: url(./order-summary-component-main/images/pattern-background-desktop.svg);
-            background-repeat: no-repeat;
-            background-size:contain;
-            background-position: top;
-            background-color: hsl(225, 100%, 94%);
-        }
-        
+    .attribution>p>a{
+        text-decoration: none;
     }
-*{  
+    .attribution>p{
+        font-size: 1rem;
+    }
+    
+    
+}
+@media screen and (min-width : 23.438rem) {
+    html{
+        font-size: calc(60% + 0.8vmin);
+        min-height: 100%;
+        background-image: url(./order-summary-component-main/images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: top;
+        background-color: hsl(225, 100%, 94%);
+    }
+    
+}
+   
+*{  box-sizing: border-box;
     font-weight: 500;
     margin: 0 ;
     padding: 0 ;
@@ -62,6 +79,7 @@ main{
 }
 
 .container{
+    box-sizing: border-box;
     -webkit-box-shadow: 5px 5px 15px 5px hsl(245, 75%, 52%,25%); 
     box-shadow: 5px 5px 15px 5px hsl(245, 75%, 52%,25%);
     margin-top: 5rem;
@@ -192,10 +210,9 @@ a:hover{
     
 }
 .attribution{
-    text-align: center;
     margin: 2rem auto;
     padding: auto;
 }
-.attribution>a{
+.attribution>p>a{
     text-decoration: none;
 }
